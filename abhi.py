@@ -6,7 +6,7 @@ def generate_pattern(user_input):
         return user_input[:i]
 
 st.title("Generate Pattern")
-user_input = st.text_input("Input":)
+user_input = st.text_input("Your Text:")
 
 for i in generate_pattern(user_input):
     st.write(i)
