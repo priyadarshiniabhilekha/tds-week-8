@@ -8,5 +8,4 @@ def generate_pattern(user_input):
 st.title("Generate Pattern")
 user_input = st.text_input("Your Text:")
 
-for i in generate_pattern(user_input):
-    st.write(i)
+
