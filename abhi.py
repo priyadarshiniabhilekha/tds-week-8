@@ -6,12 +6,14 @@ def generate_pattern(user_input):
         return user_input[:i]
 
 st.title("Generate Pattern")
+
 user_input = st.text_input("Your Text:")
+
 if user_input:
     result = generate_pattern(user_input)
     st.text("Generated Pattern:")
     for line in result:
-        st.text(line)
+        st.write(line)
 
 
 
