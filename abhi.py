@@ -9,11 +9,10 @@ st.title("Generate Pattern")
 
 user_input = st.text_input("Your Text:")
 
-if user_input:
-    result = generate_pattern(user_input)
-    st.text("Generated Pattern:")
-    for line in result:
-        st.write(line)
+substrings = generate_pattern(user_input)
+
+for substring in substrings:
+    st.write(substring)
 
 
 
