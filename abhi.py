@@ -1,18 +1,24 @@
+# app.py
+
 import streamlit as st
-st.title("Abhilekha Priyadarshini")
 
-def generate_pattern(user_input):
-    for i in range(len(user_input)+1):
-        return user_input[:i]
+def find_largest(num1, num2, num3):
+    return max(num1, num2, num3)
 
-st.title("Generate Pattern")
+def main():
+    st.title("Find the Largest Number")
 
-user_input = st.text_input("Your Text:")
+    num1 = st.number_input("Enter the first number:")
+    num2 = st.number_input("Enter the second number:")
+    num3 = st.number_input("Enter the third number:")
 
-substrings = generate_pattern(user_input)
+    if st.button("Find Largest"):
+        result = find_largest(num1, num2, num3)
+        st.success(f"The largest number is: {result}")
 
-for substring in substrings:
-    st.write(substring)
+if __name__ == "__main__":
+    main()
+
 
 
 
